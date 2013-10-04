@@ -1,0 +1,49 @@
+.container{
+    
+}
+
+.head{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#calendar{
+    text-align: center;
+}
+
+#eachDay{
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 10px;
+    margin-bottom: 1%;
+}
+
+
+#left-eachDay{
+    /*border-right: 1px solid rgba(0,0,0,0.1);*/
+}
+
+#schedule{
+    text-align: left;
+}
+
+#time{
+    width: 75%
+}
+
+#date{
+    text-align: center;
+}
+
+#submit-btn{
+    margin-bottom: 5px;
+}
+
+#agenda-list{
+    width: 75%;
+    /*margin-left: 5px;*/
+    list-style: none;
+}
+
+.span-align{
+    margin-left: 2%;
+}
