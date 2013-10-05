@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+$.fn.editable.defaults.mode = 'inline';
 
 	//variables
 	var today = new Date();
@@ -51,23 +52,29 @@ $(document).ready(function(){
 	// 	console.log($(this).closest('.day').find('.list-group').html());
 	// });
 
+	$('#agenda-item').editable();
+
 	//add agenda item
-	$('#calendar').on('click', '.add-btn', function(){
-		console.log('test');
-		var inputAgenda = $('#agendaInfo').val();
-		console.log('input',inputAgenda);
-		$(this).parent().parent().parent().find('.list-group').append(+
-			'<li class="list-group-item agendaItem">'
-			+inputAgenda+'<span class="glyphicon glyphicon-edit pull-right">'+
-			'</span></li>');
-		$('#agendaInfo').val('');
-	});
+	// $('#calendar').on('click', '.add-btn', function(e){
+	// 	event.preventDefault();
+	// 	var inputAgenda = $(this).parent().parent().find('#agendaInfo').val();
+	// 	$(this).parent().parent().parent().find('.list-group').append(
+	// 		'<li class="list-group-item agendaItem">'
+	// 		+inputAgenda+'<span class="glyphicon glyphicon-edit pull-right">'+
+	// 		'</span></li>');
+	// 	$('#agendaInfo').val('');
+	// });
+
+	// $('#calendar').on('click', '.glyphicon-edit', function(){
+	// 	console.log('test');
+
+	// });
 
 	//initial load function
 	populateWeek(today, 7);
 	
 	//hide the first div
-	$('#eachDay:first-of-type').hide();
+	//$('#eachDay:first-of-type').hide();
 
 	$('#dateDisplay').text(today);
 

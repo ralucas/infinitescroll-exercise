@@ -64,3 +64,18 @@
 .display-none{
     display: none;
 }
+
+.list-group-item{
+    font-size: 11px;
+    line-height: 1;
+    height: 30px;
+}
+
+.list-group-item span{
+    top: -2px;
+}
+
+.list-group-item span:hover{
+    cursor: pointer;
+    box-shadow: 2px 2px 2px #888888;
+}

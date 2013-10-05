@@ -18,7 +18,7 @@
         <div class="container">
 
             <header class="head row">
-                <h1 class="">Infinite Sadness</h1>
+                <h1 class="">Infinite Schedule</h1>
                 <p class="lead">Your schedule never ends!</p>
             </header>
 
@@ -37,15 +37,16 @@
                     <!-- <div class="list-group"></div> -->
 
                     <div class="col-lg-6">
-                        
-                        <div class="input-group input-group-sm">
+                        <form class="form-inline editableform" role="form">
+                        <div class="control-group form-group">
 
-                          <input type="text" class="form-control agenda-input" id="agendaInfo" placeholder="Enter Agenda or Appointment Here&hellip;">
-                          <span class="input-group-btn">
-                            <button class="btn btn-submit add-btn" type="submit">Add!</button>
-                          </span>
-                        
+                         <!--  <input type="text" class="form-control agenda-input" id="agendaInfo" placeholder="Enter Agenda or Appointment Here&hellip;"> -->
+                          
+                          <a href="#" id="agenda-item" data-type="text" data-pk="1" data-original-title="Enter Agenda or Appointment Here&hellip;" class="editable editable-click">Enter Agenda item&hellip;</a>  
+                          
                         </div>
+                        <!-- <button class="btn btn-submit add-btn" type="submit">Add!</button> -->
+                        </form>
                         <ul class="list-group"></ul>
                     </div>
 
@@ -76,15 +77,16 @@
                   </div>
                 </div>
               </div> -->
-              
+
             </div>
             </div>
         </div>
 
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+       <!--<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>-->
         <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/x-editable/1.4.6/bootstrap-editable/js/bootstrap-editable.min.js"></script>
         <script src="js/utility.js"></script>
         <script src="js/main.js"></script>
     </body>
