@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-        <title>Your Infinite Calendar</title>
+        <title>Your Infinite Sadness</title>
 
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
@@ -18,26 +18,41 @@
         <div class="container">
 
             <header class="head row">
-                <h1 class="">Infinite Calendar</h1>
+                <h1 class="">Infinite Sadness</h1>
                 <p class="lead">Your schedule never ends!</p>
             </header>
 
         <div class='container' id="calendar">
-            <div class='container' id='appendDay'>
-            <div class="container" id="eachDay">
 
-                <div class="col-md-4 btn btn-primary" data-toggle="modal" href="#agendaModal" id="left-eachDay">
-                    <h2 class="lead" id="dateDisplay"></h2>
-                    <p>Click Here to Add Agenda Item</p>
+            <div class='container day' id='appendDay'>
+
+              <div class="container" id="eachDay">
+
+                <div class="col-md-4 date-click" id="left-eachDay">
+                    <h2 class="lead dateDisplay" id="dateDisplay"></h2>
+                    <!-- <button type="button" class="btn btn-primary add-agenda" data-toggle="modal" href="#agendaModal" data-target="#agendaModal">Click Here to Add Agenda Item</button> -->
                 </div>
                 <div class="col-md-8" id="schedule">
-                    <h2 class="lead">Schedule:</h2>
-                    <div class="list-group">
+                    <p class="lead">Agenda:</p>
+                    <!-- <div class="list-group"></div> -->
+
+                    <div class="col-lg-6">
+                        
+                        <div class="input-group input-group-sm">
+
+                          <input type="text" class="form-control agenda-input" id="agendaInfo" placeholder="Enter Agenda or Appointment Here&hellip;">
+                          <span class="input-group-btn">
+                            <button class="btn btn-submit add-btn" type="submit">Add!</button>
+                          </span>
+                        
+                        </div>
+                        <ul class="list-group"></ul>
                     </div>
+
+               
                 </div>
 
-                <!-- Modal -->
-                <div class="modal fade" id="agendaModal">
+                <!-- <div class="modal fade" id="agendaModal">
                   <div class="modal-dialog">
                     <div class="modal-content">
                       <div class="modal-header">
@@ -60,8 +75,8 @@
                     </div>
                   </div>
                 </div>
-                <!--  -->
-            </div>
+              </div> -->
+              
             </div>
             </div>
         </div>
