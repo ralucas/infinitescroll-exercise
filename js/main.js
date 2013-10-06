@@ -1,7 +1,5 @@
 $(document).ready(function(){
 
-$.fn.editable.defaults.mode = 'inline';
-
 	//variables
 	var today = new Date();
 	var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
