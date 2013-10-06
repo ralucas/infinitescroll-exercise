@@ -36,53 +36,47 @@ $.fn.editable.defaults.mode = 'inline';
 		return arr;
 	};
 
-	//modal event
-	// $('#modalSave').on('click', function(){
-	// 	$('#agendaModal').modal('hide');
-	// 	var inputAgenda = $('#agendaInfo').val();
-	// 	var time = $('#time').val();
-	// 	console.log('input',inputAgenda, 'time', time);
-	// 	$(this).closest('.day').find('.list-group').append('<a href='+
-	// 		'"#agendaModal" class="list-group-item agendaItem">'+
-	// 		'<span class="pull-left">'+time+'</span><span class="span-align">'+
-	// 		inputAgenda+'</span><span class="glyphicon glyphicon-edit pull-right">'+
-	// 		'</span></a>');
-	// 	$('#agendaInfo').val('');
-	// 	$('#time').val('');
-	// 	console.log($(this).closest('.day').find('.list-group').html());
-	// });
-
-	$('#agenda-item').editable();
+	//show agenda form
+	$('#calendar').on('click', '.add-agenda', function(){
+		$(this).parent().parent().find('.form-inline').css('display', 'block');
+		console.log($(this).parent().parent().find('.form-inline'));
+	});
 
 	//add agenda item
-	// $('#calendar').on('click', '.add-btn', function(e){
-	// 	event.preventDefault();
-	// 	var inputAgenda = $(this).parent().parent().find('#agendaInfo').val();
-	// 	$(this).parent().parent().parent().find('.list-group').append(
-	// 		'<li class="list-group-item agendaItem">'
-	// 		+inputAgenda+'<span class="glyphicon glyphicon-edit pull-right">'+
-	// 		'</span></li>');
-	// 	$('#agendaInfo').val('');
-	// });
+	$('#calendar').on('click', '.add-btn', function(e){
+		event.preventDefault();
+		var inputAgenda = $(this).parent().parent().find('#agendaInfo').val();
+		$(this).parent().parent().parent().find('.list-group').append(
+			'<li class="list-group-item agendaItem">'
+			+inputAgenda+'<span class="glyphicon glyphicon-edit pull-right">'+
+			'</span></li>');
+		$(this).parent().parent().find('#agendaInfo').val('');
+		$(this).parent().css('display', 'none');
+	});
 
-	// $('#calendar').on('click', '.glyphicon-edit', function(){
-	// 	console.log('test');
-
-	// });
+	//click on edit button and make text editable
+	$('#calendar').on('click', '.glyphicon-edit', function(){
+		var editText = $(this).parent().text();
+		$(this).parent().css('display', 'none');
+		$(this).parent().parent().parent().find('.form-inline').css('display', 'block');
+		$(this).parent().parent().parent().find('.agenda-input').val(editText);
+	});
 
 	//initial load function
 	populateWeek(today, 7);
 	
 	//hide the first div
-	//$('#eachDay:first-of-type').hide();
+	//$('#eachDay:first-of-type').css('display','none');
 
-	$('#dateDisplay').text(today);
+	$('#dateDisplay').text(days[today.getDay()]+'\n '+months[today.getMonth()]+' '
+		+today.getDate()+', '+today.getFullYear());
 
 	//scroll append
 	$(window).on('scroll', function(){
 		var winHeight = $(window).height();
 		var docHeight = $(document).height();
 		var scrollTop = $(window).scrollTop();
+		
 
 		if((scrollTop + winHeight) === docHeight){
 			var lastDate = dateArr.pop();

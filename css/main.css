@@ -1,10 +1,15 @@
 .container{
-    
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .head{
     text-align: center;
     margin-bottom: 50px;
+}
+
+p.lead{
+    margin-top: 1%;
 }
 
 #calendar{
@@ -16,23 +21,17 @@
     border-radius: 10px;
     margin-bottom: 1%;
     padding-left: 0;
+    background: -webkit-linear-gradient(top, #ffffff 0%,#f1f1f1 50%,#e1e1e1 100%,#f6f6f6 100%);
 }
 
 
 .date-click{
-/*    border-right: 1px solid rgba(0,0,0,0.1);
-    background-color: hsl(208, 56%, 53%);
-    overflow: visible;
-    border-left: 1px solid rgba(0,0,0,0.1);
-    color: white;*/
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
 }
 
 .add-agenda{
     margin-bottom: 2%;
-/*    cursor: pointer;
-    background-color: hsl(208, 56%, 45%);*/
 }
 
 #schedule{
@@ -69,6 +68,7 @@
     font-size: 11px;
     line-height: 1;
     height: 30px;
+    margin-top: 1%;
 }
 
 .list-group-item span{
@@ -78,4 +78,12 @@
 .list-group-item span:hover{
     cursor: pointer;
     box-shadow: 2px 2px 2px #888888;
+}
+
+.form-control{
+    width: 91%;
+}
+
+.form-inline{
+    display: none;
 }
