@@ -64,8 +64,9 @@ $(document).ready(function(){
 	populateWeek(today, 7);
 	
 	//hide the first div
-	//$('#eachDay:first-of-type').css('display','none');
+	$('#appendDay').hide();
 
+	//first day display
 	$('#dateDisplay').text(days[today.getDay()]+'\n '+months[today.getMonth()]+' '
 		+today.getDate()+', '+today.getFullYear());
 
