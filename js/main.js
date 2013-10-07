@@ -37,7 +37,6 @@ $(document).ready(function(){
 	//show agenda form
 	$('#calendar').on('click', '.add-agenda', function(){
 		$(this).parent().parent().find('.form-inline').css('display', 'block');
-		console.log($(this).parent().parent().find('.form-inline'));
 	});
 
 	//add agenda item
@@ -76,7 +75,6 @@ $(document).ready(function(){
 		var docHeight = $(document).height();
 		var scrollTop = $(window).scrollTop();
 		
-
 		if((scrollTop + winHeight) === docHeight){
 			var lastDate = dateArr.pop();
 			console.log(lastDate);
