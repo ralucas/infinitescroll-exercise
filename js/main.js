@@ -28,6 +28,23 @@ $(document).ready(function(){
 		return dateArr;
 	};
 
+	//format date
+	var formateDate = function(date){
+		var day = days[date.getDay()];
+		var month = months[date.getMonth()];
+		var numDate = date.getDate();
+		var year = date.getFullYear();
+		var output = day+'\n '+month+' '+numDate+', '+year;
+
+		return output;
+	};
+
+	//create weekly DOM elements
+	var weeklyDOM = function(elementToCopy, classToFind, date, elementToAppendTo){
+		elementToCopy.find('classToFind').text(date);
+		$(elementToAppendTo).append(elementToCopy);
+	};
+
 	//emptyArray
 	var emptyArray = function(arr){
 		arr.length = 0;
